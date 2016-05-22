@@ -2,28 +2,17 @@
 
 <h1>Listing Beers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="beer-container">
+  <% @beers.each do |beer| %>
+    <div class="beer-item">
+      <h4><%= beer.name %></h4>
+      <p><%= beer.description %></p>
+      <%= link_to 'Show', beer %>
+      <%= link_to 'Edit', edit_beer_path(beer) %>
+      <%= link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
+</div>
 
-  <tbody>
-    <% @beers.each do |beer| %>
-      <tr>
-        <td><%= beer.name %></td>
-        <td><%= beer.description %></td>
-        <td><%= link_to 'Show', beer %></td>
-        <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
-        <td><%= link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Beer', new_beer_path %>

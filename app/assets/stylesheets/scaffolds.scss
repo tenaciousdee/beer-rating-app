@@ -6,6 +6,25 @@ body {
   line-height: 18px;
 }
 
+.wrapper {
+  margin: 0 auto;
+}
+
+.beer-container {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.beer-item {
+  flex: 1 0 25%;
+  box-sizing: inherit;
+  padding: 0 0.46875em;;
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;

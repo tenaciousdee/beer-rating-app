@@ -6,6 +6,7 @@
   <% @beers.each do |beer| %>
     <div class="beer-item">
       <h4><%= beer.name %></h4>
+      <%= inline_svg 'beer.svg' %>
       <p><%= beer.description %></p>
       <%= link_to 'Show', beer %>
       <%= link_to 'Edit', edit_beer_path(beer) %>

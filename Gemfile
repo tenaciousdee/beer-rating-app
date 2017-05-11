@@ -30,11 +30,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Style libraries
-gem 'bourbon'
-gem 'neat'
-gem 'bitters'
-
 # Inline SVG
 gem 'inline_svg'
 
